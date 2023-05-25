@@ -1,0 +1,11 @@
+Nombre	Apellido	Dirección
+Juan	Suárez	Calle 24 de septiembre 2934
+Pedro	Dominguez	Av. Cristobal de Mendoza 1839
+Maria	Trigo	Calle 24 de septiembre 2488
+José	Pacheco	Av. Beni 2617
+Alberto	Sanchez	Calle Aroma 1571
+Gustavo	Fernandez	Av. Beni 2105
+Luis	Cortez	Av. Cristobal de Mendoza 2818
+Susana	Ballesteros	Calle Aroma 1092
+Javier	Gutierrez	Calle 24 de septiembre 2304
+Rosario	Añez	Av. Beni 2683
