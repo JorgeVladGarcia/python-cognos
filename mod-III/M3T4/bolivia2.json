@@ -1,0 +1,32 @@
+[
+    {
+        "fecha" : "1/2/2022",
+        "cod_pais" : "BO",
+        "pais" : "Bolivia (Plurinational State of)",
+        "region_WHO" : "AMRO",
+        "casos_compr" : "2083",
+        "cc_acumul" : "852280",
+        "muertes" : "28",
+        "m_acumul" : "20919"
+    },
+    { 
+        "fecha" : "2/2/2022",
+        "cod_pais" : "BO",
+        "pais" : "Bolivia (Plurinational State of)",
+        "region_WHO" : "AMRO",
+        "casos_compr" : "3425",
+        "cc_acumul" : "855705",
+        "muertes" : "32",
+        "m_acumul" : "20951"
+    },
+    {
+        "fecha" : "3/2/2022",
+        "cod_pais" : "BO",
+        "pais" : "Bolivia (Plurinational State of)",
+        "region_WHO" : "AMRO",
+        "casos_compr" : "3825",
+        "cc_acumul" : "859530",
+        "muertes" : "60",
+        "m_acumul" : "21011"
+    }
+]    
