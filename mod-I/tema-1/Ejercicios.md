@@ -6,9 +6,15 @@
 4. Mostrar 5 veces el mensaje de entrada
 ```
 nombre = input("Dame tu nombre... ")
-print ("Tu nombre es:", nombre)
-print ("Tu nombre es:", nombre)
-print ("Tu nombre es:", nombre)
-print ("Tu nombre es:", nombre)
-print ("Tu nombre es:", nombre)
+for i in range(5):
+    print ("Tu nombre es:", nombre)
+```
+Los resultados serían: 
+```
+Dame tu nombre... Jorge
+Tu nombre es: Jorge
+Tu nombre es: Jorge
+Tu nombre es: Jorge
+Tu nombre es: Jorge
+Tu nombre es: Jorge
 ```
