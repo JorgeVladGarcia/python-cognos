@@ -1,3 +1,4 @@
+'''
 1. ¿Dónde está el programa mientras se ejecuta?
     En la memoria ram y procesador. 
 2. Explique las características de un compilador comercial
@@ -14,8 +15,8 @@
     - Mostrar en pantalla el valor final
 
 '''
+
 valor_init = 10
 print("El valor inicial es:", valor_init)
 valor = int(input("Añade el valor de cinco: "))
 print("El valor final es:", valor_init+valor)
-'''
