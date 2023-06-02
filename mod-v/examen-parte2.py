@@ -23,7 +23,9 @@ def extrae_CC(pais, fech_ini, fech_fin):
         # retornar todos los valores
         for valor in cur:
             print(ctry, valor[1:5])
+            # para tarea: self.ltupl.append()
     return()
+    # para tarea:return(self.ltupl)
 
 # Imprime el total de casos Covid19, el promedio diario, el día y su valor del
 # menor y mayor de los casos presentados en el período indicado.
@@ -33,7 +35,7 @@ def tot_prom_men_may(pais, fech_ini, fech_fin):
     sum = 0
     cnt = 0
     min = None 
-    max = None 
+    max = None  
     cur.execute('select * from country where country = ?', (pais,))
     #print("\nEn el periodo", fech_ini, "a", fech_fin, "en", pais)
     for linea in cur: 
