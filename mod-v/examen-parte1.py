@@ -49,8 +49,25 @@ CREATE INDEX idx_date ON covid_info(date_reported);
 '''
 )
 # abrir archivo CSV 
+import urllib.request
+import sqlite3
+
+# abrir documento
+outf = open("Covid19-mundial.csv", "w")
+fhand = urllib.request.urlopen("https://covid19.who.int/WHO-COVID-19-global-data.csv")
+
+#exportar csv 
+for i in fhand:
+    i = i.decode()
+    i = i.replace('"occupied Palestinian territory, including east Jerusalem"', 'occupied Palestinian territory including east Jerusalem')
+    outf.write(str(i.encode()) + '\n')
+outf.close()
+
+
 march = open("Covid19-mundial.csv", encoding = "utf-8-sig")
 
+for i in march:
+    print(i)
 # abrir bandera
 band = True
 # nn sirve para hacer los commits 
