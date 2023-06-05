@@ -15,7 +15,7 @@ def tot_prom_men_may(self, pais, ltdatos):
     fech_ini, dato = self.ltupl[-1]
     print("El total de casos de")
     print("Promedio diario de casos")
-    printç(dmen, )
+    print(dmen, )
     print(dmay,)
     return(tot)
 
