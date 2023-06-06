@@ -52,7 +52,7 @@ CREATE INDEX idx_date ON covid_info(date_reported);
 # on sql above, add abs(country_id)
 
 # abrir archivo CSV 
-march = open("Covid19-mundial.csv", encoding = "utf-8-sig")
+march = open("WHO-COVID-19-global-data.csv", encoding = "utf-8-sig")
 
 # abrir bandera
 band = True
