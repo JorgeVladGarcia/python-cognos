@@ -14,7 +14,7 @@ cur = conn.cursor()
 
 # ejecutar script
 cur.executescript('''
-DROP TABLE IF EXISTS serv_basicos;
+DROP TABLE IF EXISTS mat_constr;
 DROP TABLE IF EXISTS dpm;
 DROP INDEX IF EXISTS idx_munic;
 DROP INDEX IF EXISTS idx_local;
@@ -26,34 +26,14 @@ CREATE TABLE dpm (
     municipio  TEXT
 );
 
-CREATE TABLE serv_basicos (
+CREATE TABLE mat_constr (
     dpm_id     INTEGER,
     localidad  TEXT,
-    total_agua INTEGER,
-    red        INTEGER,
-    pileta     INTEGER,
-    aguatero   INTEGER,
-    pozo       INTEGER,
-    pozo_sinb  INTEGER,
-    lluvia     INTEGER,
-    laguna     INTEGER,
-    tot_desagu INTEGER,
-    alcantaril INTEGER,
-    cam_septic INTEGER,
-    pozo_ciego INTEGER,
-    calle      INTEGER,
-    quebrada   INTEGER,
-    a_laguna   INTEGER,
-    tot_electr INTEGER,
-    red_electr INTEGER,
-    motor      INTEGER,
-    panel_sol  INTEGER,
-    otra       INTEGER,
-    no_tiene   INTEGER
+    techo_teja INTEGER
 );
 
 CREATE INDEX idx_munic ON dpm(municipio);
-CREATE INDEX idx_local ON serv_basicos(localidad);
+CREATE INDEX idx_local ON mat_constr(localidad);
 ''')
 
 # abrir archivo CSV 
@@ -96,14 +76,9 @@ for linea in march:
             # fetchone identifica la llave foranea 
             dpm_id = cur.fetchone()[0]
         # ahora se empieza a insertar todos los hombres 
-        cur.execute('''INSERT INTO serv_basicos(dpm_id, localidad, total_agua,
-            red, pileta, aguatero, pozo, pozo_sinb, lluvia, laguna, tot_desagu,
-            alcantaril, cam_septic, pozo_ciego, calle, quebrada, a_laguna,
-            tot_electr, red_electr, motor, panel_sol, otra, no_tiene)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
-            (dpm_id, sbb[3], sbb[4], sbb[5], sbb[6], sbb[7], sbb[8], sbb[9],
-            sbb[10], sbb[11], sbb[12], sbb[13], sbb[14], sbb[15], sbb[16], sbb[17],
-            sbb[18], sbb[19], sbb[20], sbb[21], sbb[22], sbb[23], sbb[24]))
+        cur.execute('''INSERT INTO mat_constr(dpm_id, localidad, techo_teja)
+            VALUES (?,?,?)''',
+            (dpm_id, sbb[3], sbb[4]))
         # hacemos que commit se haga de mil en mil
         nn += 1
         # si nn llega a mil ejecuta el commit y lo pone en 0
