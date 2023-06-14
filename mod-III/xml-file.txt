@@ -1,0 +1,6 @@
+<?xml version="  1.0  " encoding=" UTF-8 "?>
+<ficha_personal>
+<nombre> Gabriel </Nombre>
+<apellido> Molina <apellido>
+<direccion> “Av. Constitución #36” </direccion>
+</ficha>

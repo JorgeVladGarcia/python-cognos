@@ -1,0 +1,21 @@
+Fecha	Cod_pais	Pais	Region_WHO	Casos_compr	CC_Acumul	Muertes	M_Acumul
+1/2/2022	BO	Bolivia (Plurinational State of)	AMRO	2083	852280	28	20919
+2/2/2022	BO	Bolivia (Plurinational State of)	AMRO	3425	855705	32	20951
+3/2/2022	BO	Bolivia (Plurinational State of)	AMRO	3825	859530	60	21011
+4/2/2022	BO	Bolivia (Plurinational State of)	AMRO	4145	863675	34	21045
+5/2/2022	BO	Bolivia (Plurinational State of)	AMRO	3396	867071	28	21073
+6/2/2022	BO	Bolivia (Plurinational State of)	AMRO	2821	869892	29	21102
+7/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1857	871749	27	21129
+8/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1062	872811	21	21150
+9/2/2022	BO	Bolivia (Plurinational State of)	AMRO	2095	874906	21	21171
+10/2/2022	BO	Bolivia (Plurinational State of)	AMRO	2233	877139	28	21199
+11/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1783	878922	20	21219
+12/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1969	880891	21	21240
+13/2/2022	BO	Bolivia (Plurinational State of)	AMRO	2491	883382	44	21284
+14/2/2022	BO	Bolivia (Plurinational State of)	AMRO	352	883734	17	21301
+15/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1270	885004	13	21314
+16/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1104	886108	17	21331
+17/2/2022	BO	Bolivia (Plurinational State of)	AMRO	981	887089	11	21342
+18/2/2022	BO	Bolivia (Plurinational State of)	AMRO	0	887089	0	21342
+19/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1086	888175	16	21358
+20/2/2022	BO	Bolivia (Plurinational State of)	AMRO	1336	889511	14	21372

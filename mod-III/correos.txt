@@ -1,0 +1,49 @@
+From jaime.zapata@hotmail.com.bo Sat Jul  18 11:24:06 2019
+Return-Path: <postmaster@server.compite.org>
+Received: from nelly (mail.outlook.es [121.225.17.87])
+	 by federico.mail.outlook.es (Prince v5.2.11) with WJNP;
+	 Sun, 21 Sep 2019 10:11:26 -0600
+X-Babol: CNH Babol 4.7
+Received: from nelly ([unix socket])
+	 by mail.outlook.es (Prince v5.2.11) with WJNP;
+	 Sat, 21 Sep 2019 10:11:26 -0600
+Received: from pedro.mr@ted.uni.edu (juancho.ted.uni.edu [121.225.17.87])
+	by orange.mail.uni.edu () with WJNP id o50EGMI1117624;
+	Sat, 21 Sep 2019 10:11:26 -0600
+Received: FROM jazmi@upa.edu.co (pro1.ente.pers.upa.edu.co [171.182.118.107])
+	BY gertru.ms.ted.uni.edu ID 8167390B0.8HQ3S.36182 ; 
+	 21 Sep 2019 10:12:03 -0400
+Received: from quite@uni.edu.co (localhost [131.5.8.2])
+	by gertru.uni.edu.co (Postfix) with WJNP id 2H416FM3U2;
+	Sat,  21 Sep 2019 11:29:51 +0400 (GMT)
+Message-ID: <201109162736.j35ECIqY918263@silenc.uni.edu.co>
+Mime-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Received: from prod.gertru@uni.edu.co ([194.35.219.182])
+          by orange.mail.uni.edu (JAMES SMTP Server 2.1.3) with SMTP ID 899
+          for <source@aquitoy.ellework.org>;
+          Sat, 5 Jan 2008 14:09:50 +0000 (GMT)
+Received: from gertru@uni.edu.co (gertru.uni.edu.co [134.68.220.122])
+	by federico.mail.outlook.es (Postfix) with ESMTP id A215243002
+	for <source@aquitoy.ellework.org>; Sat,  5 Jan 2008 14:13:33 +0000 (GMT)
+Received: from gertru.uni.edu.co (localhost [127.0.0.1])
+	by gertru.uni.edu.co (8.12.11.20060308/8.12.11) with ESMTP id m05ECJVp010329
+	for <source@aquitoy.ellework.org>; Sat, 5 Jan 2008 09:12:19 -0500
+Received: (from siuqus@localhost)
+	by gertru.uni.edu.co (8.12.11.20060308/8.12.11/Submit) id m05ECIaH010327
+	for source@aquitoy.ellework.org; Sat, 5 Jan 2008 09:12:18 -0500
+Date: Sat, 5 Jan 2008 09:12:18 -0500
+X-Authentication-Warning: gertru.uni.edu.co: apache set sender to jaime.orellana@uni.edu.co using -f
+To: source@aquitoy.ellework.org
+From: jaime.orellana@uni.edu.co
+Subject: [guaguay] svn commit: r39772 - content/branches/server_2-5-x/content-impl/impl/src/java/org/ellework/content/impl
+X-DSPAM-Result: Innocent
+X-DSPAM-Processed: Mon Jan 10 08:25:11 2022
+X-DSPAM-Confidence: 0.8475
+X-DSPAM-Probability: 0.4592
+X-DSPAM-Confidence: 0.9117
+X-DSPAM-Probability: 0.2719
+
+Details: http://source.ellework.org/viewsvn/?view=rev&rev=39772
+
+Author: jaime.orellana@uni.edu.co
