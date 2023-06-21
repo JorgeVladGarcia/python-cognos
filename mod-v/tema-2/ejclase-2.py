@@ -12,13 +12,15 @@ piso = dict() # crear diccionario
 # crear for para cargar todos los valores de scz cotoca en el diccionario piso
 for linea in march:
     linea = linea.rstrip() # remover retorno de varro
+    #print(linea)
     if band:
         band = False # para remover el primer renglon, se salta la primera linea
     else:
         ltemp = linea.split(',') # lista de valores de todas las columnas del primer renglon 
-        if ltemp[0] == "Santa Cruz" and ltemp ==[2] == "Cotoca":
+        if ltemp[0] == "Santa Cruz" and ltemp[2] == "Cotoca":
             piso[ltemp[3]] = int(ltemp[24]) # guardar el nombre de la localidad con la columna de los pisos de cemento , diccionario guarda info
 
+print(piso)
 # iniciar nuevo loop
 n = 1 
 for clave, valor in list(piso.items()): # enviar valores del diccionario a las variables clave y valor 
@@ -26,4 +28,4 @@ for clave, valor in list(piso.items()): # enviar valores del diccionario a las v
         xyplot.add(clave, [(n, valor)])
     n += 1
 
-xyplot.render_to_file('M5T2-EC2-2-Graf.svg')    
+xyplot.render_to_file('draft3.svg')    
