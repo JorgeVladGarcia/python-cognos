@@ -49,4 +49,3 @@ xyplot.add("Paja", paja)
 xyplot.add("Otro", otro)
 
 xyplot.render_to_file('draft3.svg')    
-
