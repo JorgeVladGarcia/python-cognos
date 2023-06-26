@@ -34,14 +34,21 @@ for linea in march:
             losa.append((cnt, int(linea[15])))
             paja.append((cnt, int(linea[16])))
             otro.append((cnt, int(linea[17])))
+            # agregar lista de localidades
+            # localid.append()
             cnt += 1
 
 
 
 import pygal 
 xyplot = pygal.XY()
+# utilizar opcion de linease no XY 
+# linplot = pygal.Line() # para definir tipo de grafica line
+
+
 xyplot.title = "Techos de viviendas de las localidades del municipio de Porongo"
 
+# agregar linplot.x_labels = localid
 xyplot.add("Calamina", calamina)
 xyplot.add("Teja", teja)
 xyplot.add("Losa", losa)
