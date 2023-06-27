@@ -1,3 +1,15 @@
+'''
+Utilizando la información de los materiales de construcción del Censo 2012 dibujar
+un gráfico con los datos de los pisos de cemento de las viviendas del municipio de
+Cotoca. La grafica debe ser producida en forma automática por un programa
+Python, el mismo que debe leer los datos del archivo Material de Construcción.csv,
+extraer los datos de la columna pisos de cemento y del municipio de Cotoca,
+preparar los datos para utilizarlos con pygal y conformar el gráfico donde se tenga
+la lista de localidades del municipio de Cotoca y los valores de los puntos. En la
+segunda parte elimine la localidad COTOCA que tiene un valor muy alto con
+respecto a las demás localidades.
+'''
+
 import pygal 
 
 xyplot = pygal.XY()

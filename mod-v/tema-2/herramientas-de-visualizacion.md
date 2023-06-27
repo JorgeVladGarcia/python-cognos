@@ -3,4 +3,6 @@
 - localización de paquetes
 - paquetes de visualización 
 
-## Instalación de paquetes 
+## Paquetes de visualización 
+- matplotlib: 
+- pygal
