@@ -1,4 +1,13 @@
-# working graph
+'''
+Utilizando la información de libre acceso del Banco Mundial dibujar un
+gráfico con los datos del Producto Interno Bruto (PIB) de los países
+Bolivia, Paraguay, Ecuador, Chile, Perú y Colombia a partir del año 1990
+al 2021. La grafica debe ser producida en forma automática por un
+programa Python, para esto se debe copiar los datos de la página web
+del Banco Mundial, acondicionar los datos en un archivo CSV, preparar
+los datos de acuerdo al Modelo de datos expuesto y finalmente
+graficar los datos utilizando el paquete pygal en formato tipo XY.
+'''
 
 """
 Aplicación para graficar los datos del Producto Interno Bruto (PIB) de paises seleccionados.

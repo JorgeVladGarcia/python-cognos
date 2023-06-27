@@ -1,3 +1,12 @@
+'''
+Utilizando la información Covid-19 de la OMS, seleccionar los casos
+comprobados Covid y muertes diarias de los países Argentina, México,
+Perú, Chile y Colombia del período 2021-09-25 al 2021-10-04 inclusive.
+Los datos deben ser extraídos de la base de datos SQLite mediante un
+programa Python y los resultados mostrados en pantalla. El programa
+debe ser hecho con funciones y un programa principal
+'''
+
 import sqlite3
 
 '''
