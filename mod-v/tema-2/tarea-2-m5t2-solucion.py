@@ -16,10 +16,11 @@ list_dept = []
 for linea in march:
     linea = linea.rstrip()
     linea = linea.split(',')
+    # Identificar valores departamentos, donde dice "Total"
     if linea[1] == "Total":
         value = int(linea[4])
+        # guardar valores en una lista 
         list_dept.append(value)
-        #list_mun.append(int(linea[4]))
 
 chart = pygal.Line(stroke = False)
 chart.add('data', list_dept)

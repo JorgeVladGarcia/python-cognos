@@ -8,7 +8,6 @@ del Banco Mundial, acondicionar los datos en un archivo CSV, preparar
 los datos de acuerdo al Modelo de datos expuesto y finalmente
 graficar los datos utilizando el paquete pygal en formato tipo XY.
 '''
-
 """
 Aplicación para graficar los datos del Producto Interno Bruto (PIB) de paises seleccionados.
 Los datos de todos los paises se encuentran en un archivo CSV.
@@ -31,19 +30,22 @@ def lectura_datos_totales(dat_csv, camp_clav, separador, quote):
     Salida:
       Regresa un diccionario de diccionarios donde el diccionario externo mapea el valor en el campo clave al correspondiente renglón del archivo. Los diccionarios internos mapean a los nombres de los campos a los valores de campo para cada renglón. {"Aruba": {1990: 123.45, 1991: 876.29, ...}, "AFE": {1990: 345.89....}...}
     """
+    # crear diccionario vacío
     dicddics = dict()
+
+    # variable para saltar primera linea 
     band = True
 
-    # leer csv 
+    # leer/abrir csv 
     march = open(dat_csv, encoding="utf8")
     for linea in march:
         # eliminar retorno de carro 
         linea = linea.rstrip()
         # leer la primera linea
         if band:
-            # almacenar información en la cabecera 
+            # almacenar de la cabecera en una variable
             lcab = linea.split(separador)
-            # almacenar longitud del csv 
+            # almacenar longitud del csv, num columns
             tam = len(lcab)
             # saltar a segunda linea, ignorar cabecera 
             band = False
@@ -53,9 +55,11 @@ def lectura_datos_totales(dat_csv, camp_clav, separador, quote):
             # almacenar info csv menos cabecera 
             ldat = linea.split(separador)
             # loop para agarrar datos del csv  y guardarlos en dic interno
+            # toma en cuenta solo columnas de interes 
             for n in range(34, tam-1):
                 dicint[lcab[n]] = ldat[n]
             # unir diccionario interno y externo
+            # {"Aruba": {1990: 123.45, 1991: 876.29, ...}, "AFE": {1990: 345.89....}...}
             dicddics[ldat[camp_clav]] = dicint
     #print(dicddics)
     return dicddics
@@ -64,14 +68,14 @@ def lectura_datos_totales(dat_csv, camp_clav, separador, quote):
 def recupera_un_elemento(dcomplem, dun_pais):
     """
     Objetivo:
-      Recuperar un elemento del diccionario de diccionarios (datos del PIB) y acomodarlo en el modo requerido para ser  graficado luego
+      Recuperar un elemento del diccionario de diccionarios (datos del PIB) y acomodarlo en el modo requerido para ser  graficado luego [(1990, 987.98), (1991, 987.23), .....]
       
     Entradas:
       dcomplem  - Diccionario de datos complementarios, rango de fechas a ser graficadas, nombre del pais y otros
-      dun_pais - Diccionario de los datos PIB de un pais
+      dun_pais - Diccionario de los datos PIB de un pais {1990: 123.45, 1991: 876.29, ...}
 
     Salida: 
-      Regresa una lista de tuplas de la forma (año, PIB) del pais indicado, para los años que se encuentran en el rango seleccionado (del min_year al max_year inclusive) que se indican en el diccionario de datos complementarios. El año es entero y el PIB un número de punto flotante
+      Regresa una lista de tuplas de la forma (año, PIB) del pais indicado, para los años que se encuentran en el rango seleccionado (del min_year al max_year inclusive) que se indican en el diccionario de datos complementarios. El año es entero y el PIB un número de punto flotante [(1990, 987.98), (1991, 987.23), .....]
     """
     # crear lista 
     ltu_pais = list()
@@ -83,9 +87,11 @@ def recupera_un_elemento(dcomplem, dun_pais):
     # 
     for clave, valor in list(dun_pais.items()):
         anio = int(clave)
+        # limpiar valores numerales 
         pib = valor.replace(",", ".")
         if anio >= amin and anio <= amax:
             if valor == "":
+                # si el valor es 0 reemplazar por cero
                 ltu_pais.append((anio, 0))
             else:
                 ltu_pais.append((anio, float(pib)))
@@ -110,8 +116,12 @@ def recupera_elem_selec(datos_pib, dcomplem, list_paises):
     """
     # crear diccionario vacío 
     dic_graf = dict()
+    # iterar cada pais en lista de paises
     for ctry in list_paises:
+        # guardar datos PIB de un pais por cada pais en la lista 
         dunpais = datos_pib[ctry]
+        # crear diccionario con formato correcto {"Bolivia": [(1990, 987.98), (1991, 987.23), .....]}
+        # llamando función recupera un elemento 
         dic_graf[ctry] = recupera_un_elemento(dcomplem, dunpais)
     #print(dic_graf)
     return dic_graf
@@ -132,11 +142,11 @@ def crea_grafica_xy(dic_graf, list_paises , arch_graf):
     """
     xyplot = pygal.XY(heigh=400)
 
+    # crear título en base a lista de países 
     title = ""
     for i in lpaises:
         title += i + " "
     xyplot.title = "PIB: " + str(title)
-    #print(dic_graf)
 
     for ctry, pibyear in list(dic_graf.items()):
       xyplot.add(ctry, pibyear)
@@ -162,6 +172,9 @@ dic_complem = {
 lpaises = ["Bolivia", "Paraguay", "Ecuador", "Chile", "Perú", "Colombia"]
 
 # llamar funciones 
+
 datos_tot = lectura_datos_totales('Datos_PIB.csv', 0, ';', '"')
-datos_selec = recupera_elem_selec(datos_tot, dic_complem, lpaises)
+
+datos_selec = recupera_elem_selec(datos_tot, dic_complem, lpaises)  #{"Aruba": {1990: 123.45, 1991: 876.29, ...}, "AFE": {1990: 345.89....}...}
+
 crea_grafica_xy(datos_selec, lpaises, "graf_xy_pib.svg")
